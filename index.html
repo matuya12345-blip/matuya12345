@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UNKNOWN — Explore Everything</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #08090d;
+    color: #eeeeee;
+    font-family:
+        "Segoe UI",
+        "Yu Gothic",
+        sans-serif;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.light {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(100,120,255,.18),
+            transparent 65%
+        );
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translate(-100px,-50px);
+    }
+    50% {
+        transform: translate(100px,50px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    width: 900px;
+    max-width: 90%;
+}
+
+.small {
+    color: #777;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: clamp(65px, 12vw, 150px);
+    margin: 5px 0;
+    line-height: .9;
+    letter-spacing: -7px;
+}
+
+.hero p {
+    color: #999;
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.number {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    font-size: 180px;
+    color: rgba(255,255,255,.025);
+    font-weight: bold;
+}
+
+/* ---------- CONTENT ---------- */
+
+section {
+    width: 1000px;
+    max-width: 90%;
+    margin: auto;
+    padding: 130px 0;
+}
+
+.section-number {
+    color: #555;
+    font-family: monospace;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 15px 0 50px;
+}
+
+.intro {
+    font-size: 26px;
+    line-height: 2;
+    max-width: 800px;
+}
+
+/* ---------- CARDS ---------- */
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px,1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #222;
+    padding: 30px;
+    min-height: 260px;
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #777;
+    background: #0e1016;
+}
+
+.card-number {
+    color: #555;
+    font-family: monospace;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.card p {
+    color: #888;
+    line-height: 1.8;
+}
+
+/* ---------- EXPERIMENT ---------- */
+
+.experiment {
+    text-align: center;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+#number {
+    font-size: clamp(70px,12vw,130px);
+    font-weight: bold;
+    margin: 40px;
+    font-family: monospace;
+}
+
+button {
+    background: white;
+    color: black;
+    border: 0;
+    padding: 18px 35px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- LOG ---------- */
+
+.log {
+    border-left: 1px solid #333;
+    padding-left: 30px;
+}
+
+.log-item {
+    margin: 40px 0;
+}
+
+.date {
+    color: #555;
+    font-family: monospace;
+}
+
+.log-item h3 {
+    font-size: 25px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 80px 5%;
+    border-top: 1px solid #222;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+    <div class="light"></div>
+
+    <div class="hero-content">
+
+        <div class="small">
+            PERSONAL EXPLORATION PROJECT
+        </div>
+
+        <h1>UNKNOWN.</h1>
+
+        <p>
+            知らないことは、まだ世界が残っているということ。
+            <br>
+            Programming / Music / Ideas / Web /
+            and everything I haven't met yet.
+        </p>
+
+    </div>
+
+    <div class="number">
+        00
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section>
+
+    <div class="section-number">
+        01 / ABOUT
+    </div>
+
+    <h2>Why explore?</h2>
+
+    <p class="intro">
+        何かの専門家になるためではない。
+        <br><br>
+        違う世界を覗いて、
+        そこにある構造を知る。
+        <br>
+        いつか離れていた知識同士が
+        勝手につながる瞬間を待つ。
+    </p>
+
+</section>
+
+
+<!-- INTERESTS -->
+
+<section>
+
+    <div class="section-number">
+        02 / CURRENT INTERESTS
+    </div>
+
+    <h2>Exploring now.</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-number">001</div>
+            <h3>PYTHON</h3>
+            <p>
+                コンピュータに命令する。
+                小さな自動化から、
+                世界とつながるプログラムまで。
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-number">002</div>
+            <h3>WEB</h3>
+            <p>
+                ブラウザ、サーバー、API。
+                普段見ているインターネットの
+                裏側を覗く。
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-number">003</div>
+            <h3>MUSIC</h3>
+            <p>
+                なぜ数分の音楽が、
+                数十年前の記憶まで
+                呼び戻すことができるのか。
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-number">004</div>
+            <h3>IDEAS</h3>
+            <p>
+                哲学、心理、社会、科学。
+                一つの答えより、
+                複数の視点を持つ。
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JAVASCRIPT EXPERIMENT -->
+
+<section class="experiment">
+
+    <div class="section-number">
+        03 / EXPERIMENT
+    </div>
+
+    <h2>Generate something.</h2>
+
+    <p>
+        この数字はJavaScriptが
+        あなたのブラウザの中で作っています。
+    </p>
+
+    <div id="number">
+        000000
+    </div>
+
+    <button onclick="generateNumber()">
+        GENERATE
+    </button>
+
+</section>
+
+
+<!-- LOG -->
+
+<section>
+
+    <div class="section-number">
+        04 / EXPLORATION LOG
+    </div>
+
+    <h2>What happened?</h2>
+
+    <div class="log">
+
+        <div class="log-item">
+            <div class="date">
+                DAY 001
+            </div>
+
+            <h3>
+                Pythonを初めて動かした。
+            </h3>
+
+            <p>
+                コードは暗号ではなく、
+                コンピュータへの命令だった。
+            </p>
+        </div>
+
+
+        <div class="log-item">
+            <div class="date">
+                DAY 002
+            </div>
+
+            <h3>
+                APIという入口を知った。
+            </h3>
+
+            <p>
+                プログラムは、
+                他のサービスと会話できる。
+            </p>
+        </div>
+
+
+        <div class="log-item">
+            <div class="date">
+                DAY 003
+            </div>
+
+            <h3>
+                自分のサーバーを動かした。
+            </h3>
+
+            <p>
+                localhost。
+                自分のPCがWebサーバーになった。
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div>
+        UNKNOWN PROJECT
+    </div>
+
+    <div>
+        KEEP EXPLORING.
+    </div>
+
+</footer>
+
+
+<script>
+
+function generateNumber() {
+
+    const number =
+        Math.floor(
+            Math.random() * 1000000
+        );
+
+    document.getElementById(
+        "number"
+    ).innerText =
+        String(number).padStart(6,"0");
+}
+
+</script>
+
+
+</body>
+</html>
